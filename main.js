@@ -1,3 +1,9 @@
+noseX=0;
+ noseY=0;
+ function preload()
+ {
+    pig_nose = loadImage("pig.jpg");
+ }
 function setup() 
 {
      canvas = createCanvas(300, 300);
@@ -22,9 +28,11 @@ function setup()
                  } }
 function take_snapshot()
 { 
-    save('eyes.png');
+    save('myFilterImage.png');
 }
 function draw(){
     image(video,0,0,300,300);
-
+    fill(255,0,0);
+    stroke(255,0,0);
+    image(pig_nose,noseX,noseY,30,30);
 }
